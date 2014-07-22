@@ -1,0 +1,52 @@
+---
+title       : The Handy Everlasting Regression Plotter  (Does Everything Regression-Plottery)
+subtitle    : (HERP DERP)
+author      : Kendall Parks
+job         : Currently Unemployed  :-(
+framework   : io2012        # {io2012, html5slides, shower, dzslides, ...}
+highlighter : highlight.js  # {highlight.js, prettify, highlight}
+hitheme     : tomorrow      # 
+widgets     : []            # {mathjax, quiz, bootstrap}
+mode        : selfcontained # {standalone, draft}
+knit        : slidify::knit2slides
+---
+## Introducing the all-new 2014 HERP DERP!!!
+Haven't you ever wanted to plot stuff on a graph, and then fit a linear model to the data, and then,
+plot more stuff on the graph, and then RE-FIT the linear model to the new data?!
+  
+#### I know I have!  
+<br/>
+  That's why I'm introducing the 2014 model 
+#### Handy Everlasting Regression Plotter (Does Everything Regression-Plottery)
+(HERP DERP)
+
+--- .higher
+## It HERPs!
+Start with some pre-loaded data and see it plotted and fit to a linear model.  
+Like this!
+
+```{r, echo=FALSE}
+par(cex=2, pch=20, oma=c(1,1,0,0))
+data = data.frame(x=c(1:4), y=c((1:4)^2))
+fit = lm(y~x, data=data)
+plot(data$y ~ data$x, col="blue", xlab="X", ylab="Y")
+abline(fit, col="red", lwd=2)
+```
+
+---  .smaller
+## It DERPs!  
+Add some more data points, and watch it RE-FIT the linear model!!! In real time!!! Not fake time!!!  
+__OH MY!!!__
+```{r, echo=FALSE}
+data = rbind(data, c(5, 5^2), c(6, 6^2))
+fit = lm(y~x, data=data)
+plot(data$y ~ data$x, col="blue", xlab="X", ylab="Y", pch=20, cex.axis=2, cex.lab=2)
+abline(fit, col="red", lwd=2)
+```
+
+--- .styling
+## And it will never let you down.
+Long after you're dead, this app will still be kickin'.  
+That's the __POWER__ of the internet, baby!  
+  
+  <img src="http://www.mindthesciencegap.org/wp-content/uploads/2013/07/the-internet-1024x691.jpg"/>
